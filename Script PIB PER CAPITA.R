@@ -38,6 +38,9 @@ freq_PIB <- table(PIB_Per_Capita_Países$`Income group`)
 freq_PIB
 
 79+27+55+55
+is.na(PIB_Per_Capita_Países$`Income group`)
+freq_NA <- table(is.na(PIB_Per_Capita_Países$`Income group`))
+freq_NA
 sum(is.na(PIB_Per_Capita_Países$`Income group`))
 216+49
 
@@ -72,11 +75,6 @@ ggplot(freq, aes(x = category, y = freq, fill = category)) +
   geom_text(aes(label = freq), vjust = -0.5)
 
 
- 
-
-
-
-
 library(ggplot2)
 
 # Dados de frequência
@@ -100,16 +98,6 @@ ggplot(df, aes(x = categorias, y = freq, fill = categorias)) +
        y = "Frequência")
 
 
-
-
-
-
-
-
-
-
-
-
 # criar tabela de frequência
 freq_table <- table(PIB_Per_Capita_Países$`Income group`, useNA = "ifany")
 
@@ -118,9 +106,6 @@ freq_table <- freq_table[order(freq_table)]
 
 # criar gráfico de barras ordenado
 barplot(freq_table, col = rainbow(length(freq_table)))
-
-
-
 
 
 
@@ -152,16 +137,3 @@ ggplot(df_freq, aes(x=reorder(grupo, -frequencia, FUN = function(x) x), y=freque
   ylab("Frequency") +
   ggtitle("Frequência dos países por Grupo de PIB") +
   theme(plot.title = element_text(hjust = 0.5)) 
-
-
-
-
-
-
-
-
-
-
-
-
-
