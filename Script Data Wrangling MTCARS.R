@@ -110,8 +110,6 @@ boxplot(mtcars$mpg, main="Boxplot das variáveis mpg, cyl e hp do dataset MTCARS
 boxplot(mtcars$cyl, main="", ylab="cyl")
 boxplot(mtcars$hp, main="", ylab="hp")
 
-#Boxplot interativo ggplot2????
-
 #HISTOGRAMA
 # Criar o histograma com a função ggplot() da variável MPG
 ggplot(mtcars, aes(x = mpg)) +
@@ -127,7 +125,6 @@ ggplot(mtcars, aes(x = cyl)) +
   xlab("cilindros_por_carro (CYL)") +
   ylab("Frequency") +
   ggtitle("Histogram of cyl in mtcars")
-
 
 
 #GRÁFICO
@@ -207,10 +204,6 @@ mtcars5 <- mtcars[mtcars$mpg >= 0 & mtcars$cyl >= 0 & mtcars$hp >= 0, c("mpg", "
 mtcars %>% 
   group_by(cyl) %>% 
   summarize(mean_mpg = mean(mpg))
-
-#join
-#?????
-
 
 
 #VERIFICANDO E TRANSFORMANDO CLASSE DO OBJETO
